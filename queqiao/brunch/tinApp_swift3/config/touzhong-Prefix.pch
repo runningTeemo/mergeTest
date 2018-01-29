@@ -1,0 +1,35 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+#define REDPACKET_AVALABLE
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+
+    #import "EMSDKFull.h"
+    #import "EaseUI.h"
+    #define kHaveUnreadAtMessage    @"kHaveAtMessage"
+    #define kAtYouMessage           1
+    #define kAtAllMessage           2
+    #define postMessageName           @"postMessageName"
+    #define postMessageImg           @"postMessageImg"
+    #define reciveMessageName        @"reciveMessageName"
+    #define reciveMessageImg         @"reciveMessageImg"
+    #define postMessageId            @"postMessageId"
+    #define applyCheckMessage          @"applyCheckMessage"//值为1 ，用来标志是否是项目申请查看 //值为2分享到好友
+
+    #define commitProjectModel    @"commitProjectModel"//提交申请之后返回的对象
+    #define articleShareDic              @"articleShareDic"//分享到好友聊天界面需要，文章模型（）
+#define DEMO_CALL 1
+
+#endif
